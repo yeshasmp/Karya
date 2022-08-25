@@ -1,0 +1,12 @@
+.modal-header{
+    background-color: #212529;
+    color: white;
+}
+
+.btn-close{
+    background-color: #ffffff;
+}
+
+.ng-invalid.ng-touched:not(form){ 
+    border: 3px solid #93205C;
+}

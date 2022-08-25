@@ -1,0 +1,75 @@
+<h1 class="m-4">Dashboard</h1>
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <img src="../../assets/banner.svg" id="banner_image" width="250px" height="250px">
+      </div>
+      <div class="col-8 mt-4">
+        <h1 class="title">Hi {{ profileName }}!</h1>
+        <p class="sub-title">Welcome to Karya! Your personalized task management system</p>
+        <p *ngIf="overdueTasks.length > 0">You have {{ overdueTasks.length }} overdue tasks <span
+            *ngIf="upcomingTasks.length > 0">and {{ upcomingTasks.length }}</span> upcoming tasks pending this month.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row p-2">
+  <div class="col-6 card shadow">
+    <h4 class="text-center">{{ currentMonthYear }}</h4>
+    <ngx-charts-pie-grid [scheme]="pieChartColorScheme" [results]="currentMonthTasks">
+    </ngx-charts-pie-grid>
+  </div>
+  <div class="col-6 card shadow">
+    <ngx-charts-line-chart [scheme]="lineChartColorScheme" [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel" [results]="currentYearCompletedTasks">
+    </ngx-charts-line-chart>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6 card shadow">
+    <h5 class="text-center">OverDue</h5>
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th class="col">Overdue</th>
+          <th class="col">Task</th>
+          <th class="col">Deadline</th>
+          <th class="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of overdueTasks.slice(0, 5);">
+          <td>{{ task.overdueDays }} <span *ngIf="task.overdueDays > 1">days</span> <span
+              *ngIf="task.overdueDays <= 1">day</span></td>
+          <td>{{ task.title }}</td>
+          <td>{{ task.duedate }}</td>
+          <td><button class="rounded-pill shadow" (click)="editTask(task)"><img src="../../assets/info_black.svg"
+                alt="Edit Task"></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-6 card shadow">
+    <h5 class="text-center">Upcoming Deadlines</h5>
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th class="col">Task</th>
+          <th class="col">Deadline</th>
+          <th class="col" id="action">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of upcomingTasks.slice(0, 5);">
+          <td>{{ task.title }}</td>
+          <td>{{ task.duedate }}</td>
+          <td><button class="rounded-pill edit-pill shadow" (click)="editTask(task)"><img
+                src="../../assets/info_black.svg" alt="Edit Task"></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

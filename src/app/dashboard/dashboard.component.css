@@ -1,0 +1,40 @@
+.jumbotron {
+    margin: 12px;
+    border-radius: 12px;
+    background-color: #FFE7C2;
+    height: 220px;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#banner_image {
+    position: absolute;
+    z-index: 10;
+    top: 80px;
+    left: 250px;
+}
+
+.col-6 {
+    background-color: #FFFFFF;
+    width: 46%;
+    margin: 18px;
+    border-radius: 12px;
+}
+
+.rounded-pill {
+    border: 0;
+    border-radius: 50%;
+    background-color: #F4F4F4;
+}
+
+td,
+th {
+    text-align: center;
+}

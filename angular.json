@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "samasye": {
+    "karya": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,19 +17,23 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/samasye",
+            "outputPath": "dist/karya",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -37,7 +41,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -68,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "samasye:build:production"
+              "browserTarget": "karya:build:production"
             },
             "development": {
-              "browserTarget": "samasye:build:development"
+              "browserTarget": "karya:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "samasye:build"
+            "browserTarget": "karya:build"
           }
         },
         "test": {
@@ -91,7 +95,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"
@@ -102,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "samasye"
+  "defaultProject": "karya"
 }

@@ -1,0 +1,24 @@
+<div class="row">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <img src="../../assets/bug.svg" alt="App Icon">
+        <a class="nav-title" routerLink="/dashboard">Karya</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/dashboard"><img src="../../assets/home.svg" alt="App Icon">Dashboard</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/calendar"><img src="../../assets/calendar.svg" alt="App Icon">Calendar</a>
+            </li>
+            <li class="nav-item text-center">
+              <button class="btn btn-primary mt-2" (click)="addTask()">Add Task</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>

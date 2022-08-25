@@ -1,0 +1,56 @@
+.container {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin: 20px
+}
+
+/* Day Header Style */
+::ng-deep .fc .fc-col-header-cell-cushion{
+    color: #212529;
+    text-decoration: none;
+}
+
+/* Today Style */
+::ng-deep .fc .fc-daygrid-day.fc-day-today{
+    background-color: #F93154 !important;
+}
+
+::ng-deep .fc .fc-col-header-cell{
+    background-color: #212529;
+}
+
+/* Day Header Style*/
+::ng-deep .fc .fc-col-header-cell-cushion {
+    color: #fff;
+}
+
+/* Event Style */
+::ng-deep .fc .fc-daygrid-event {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(76, 175, 80, .4);
+    padding: 2px;
+    margin-bottom: 2px;
+    border: none !important;
+    cursor: pointer;
+}
+
+/* Event Title Style */
+::ng-deep .fc .fc-event-title{
+    color: #000;
+    font-weight: 400;
+}
+
+ /* Event hover background  */
+::ng-deep .fc .fc-daygrid-day:hover{
+    background-color: #212529;
+}
+
+/* Day text style */
+::ng-deep .fc .fc-daygrid-day:hover .fc-daygrid-day-number{
+    color: #fff;
+}
+
+/* Day text Style */
+::ng-deep .fc .fc-daygrid-day-number{
+    color: #212529;
+    text-decoration: none;
+}

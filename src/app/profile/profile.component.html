@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Profile Settings</h4>
+  </div>
+  <div class="modal-body">
+    <form #profileForm="ngForm">
+      <div class="form-group mb-3">
+        <label for="name">Name : </label>
+        <input class="form-control mt-2" id="name" name="name" type="text" maxlength="25" [(ngModel)]="name" #profileName="ngModel" required/>
+        <div class="alert alert-danger" *ngIf="profileName?.touched && profileName?.errors?.['required']">Name is required!</div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary"[disabled]="!profileForm.valid" (click)="save(profileForm); bsModalRef.hide()">Save</button>
+  </div>

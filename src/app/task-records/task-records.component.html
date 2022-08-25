@@ -1,0 +1,74 @@
+<div class="row justify-content-center m-4">
+    <div class="col-4">
+        <h4 class="mb-2">Open Task</h4>
+        <div class="card-container">
+            <div class="card shadow mb-3 bg-white" *ngFor="let task of openTasks">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="card-title">{{ task.title }}</h5>
+                        <p class="card-text">{{ task.description }}</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <button class="btn"
+                                [ngClass]="{'design': task.type === 'Design', 'bug' : task.type === 'Bug', 'documentation' : task.type === 'Documentation' }">{{
+                                task.type }}</button>
+                        </div>
+                        <button class="rounded-pill edit-pill shadow" (click)="editTask(task)"><img
+                                src="../../assets/edit.svg" alt="Edit Task"></button>
+                        <button class="rounded-pill delete-pill shadow" (click)="deleteTask(task.id)"><img
+                                src="../../assets/delete.svg" alt="Delete Task"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <h4 class="mb-2">In Progress Task</h4>
+        <div class="card-container">
+            <div class="card shadow mb-3 bg-white" *ngFor="let task of inProgressTasks">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="card-title ">{{ task.title }}</h5>
+                        <p class="card-text">{{ task.description }}</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <button class="btn"
+                                [ngClass]="{'design': task.type === 'Design', 'bug' : task.type === 'Bug', 'documentation' : task.type === 'Documentation' }">{{
+                                task.type }}</button>
+                        </div>
+                        <button class="rounded-pill edit-pill shadow" (click)="editTask(task)"><img
+                                src="../../assets/edit.svg" alt="Edit Task"></button>
+                        <button class="rounded-pill delete-pill shadow" (click)="deleteTask(task.id)"><img
+                                src="../../assets/delete.svg" alt="Delete Task"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <h4 class="mb-2">Closed Task</h4>
+        <div class="card-container">
+            <div class="card shadow mb-3 bg-white" *ngFor="let task of closedTasks">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="card-title">{{ task.title }}</h5>
+                        <p class="card-text">{{ task.description }}</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <button class="btn"
+                                [ngClass]="{'design': task.type === 'Design', 'bug' : task.type === 'Bug', 'documentation' : task.type === 'Documentation' }">{{
+                                task.type }}</button>
+                        </div>
+                        <button class="rounded-pill edit-pill shadow" (click)="editTask(task)"><img
+                                src="../../assets/edit.svg" alt="Edit Task"></button>
+                        <button class="rounded-pill delete-pill shadow" (click)="deleteTask(task.id)"><img
+                                src="../../assets/delete.svg" alt="Delete Task"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="taskForm">
+    <div class="form-group mb-3">
+      <label for="type">Type : </label>
+      <select [ngClass]="{'ng-invalid' : taskFormControls['type'].value == 'None'}" class="form-control mt-2" id="type" name="type" formControlName="type">
+        <option>None</option>
+        <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+      </select>
+      <div class="alert alert-danger" *ngIf="taskFormControls['type'].touched && (taskFormControls['type'].errors?.['required'] || taskFormControls['type'].value == 'None')">Type is required!</div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="title">Title : </label>
+      <input class="form-control mt-2" id="title" name="title" type="text" formControlName="title" />
+      <div class="alert alert-danger" *ngIf="taskFormControls['title'].touched && taskFormControls['title'].errors?.['required']">Title is required!</div>
+      <div class="alert alert-danger" *ngIf="taskFormControls['title'].touched && taskFormControls['title'].errors?.['maxlength']">Title cannot be more than 30 characters!</div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="description">Description : </label>
+      <input class="form-control mt-2" id="description" name="description" type="text" formControlName="description" />
+      <div class="alert alert-danger" *ngIf="taskFormControls['description'].touched && taskFormControls['description'].errors?.['required']">Description is required!</div>
+      <div class="alert alert-danger" *ngIf="taskFormControls['description'].touched && taskFormControls['description'].errors?.['maxlength']">Description cannot be more than 100 characters!</div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="priority">Priority : </label>
+      <div class="form-check mt-2">
+        <input class="form-check-input mr-2" type="radio" value="high" name="priority" id="priorityHigh" formControlName="priority">
+        <label class="form-check-label" for="priority">High</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input mr-2" type="radio" value="low" name="priority" id="priorityLow" formControlName="priority">
+        <label class="form-check-label" for="priority">Low</label>
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="duedate">Due Date : </label>
+      <input class="form-control mt-2" type="text" id="duedate" name="duedate" bsDatepicker formControlName="duedate" 
+      [bsConfig]="{ adaptivePosition: true , dateInputFormat: 'DD-MM-YYYY', isAnimated: true}"/>
+      <div class="alert alert-danger" *ngIf="taskFormControls['duedate'].touched && taskFormControls['duedate'].errors?.['required']">Date is required!</div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="status">Status : </label>
+      <select class="form-control mt-2" id="status" name="status" formControlName="status">
+        <option *ngFor="let st of status" [value]="st">{{ st }}</option>
+      </select>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="addEditTask(taskForm)">Submit</button>
+  <button type="button" class="btn btn-danger" (click)="bsModalRef.hide()">Close</button>
+</div>

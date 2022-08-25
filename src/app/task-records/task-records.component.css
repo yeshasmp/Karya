@@ -1,0 +1,71 @@
+.col-4 {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 30%;
+    height: 90vh;
+    margin-right: 32px;
+    margin-bottom: 30px;
+}
+
+.card-container{
+    height: 80vh;
+    overflow: scroll;
+}
+
+.card {
+    background-color: #F4F4F4 !important;
+    border: none;
+    border-radius: 8px !important;
+    margin: 8px;
+}
+
+/* Column Title Styles */
+.mb-2 {
+    text-align: center;
+    padding: 4px;
+}
+
+/* Image Hover Cursor Style */
+img:hover {
+    cursor: pointer;
+}
+
+/* Task type button Style */
+.design {
+    margin: 6px;
+    border: 0;
+    background-color: #ccff90;
+    color: #1faa00;
+}
+
+.bug {
+    margin: 6px;
+    border: 0;
+    background-color: #ffd0b0;
+    color: #a30000;
+}
+
+.documentation {
+    margin: 6px;
+    border: 0;
+    background-color: #c0cfff;
+    color: #0026ca;
+}
+
+/* Edit and Delete floating button styles */
+.rounded-pill {
+    width: 2.8rem;
+    height: 2.8rem;
+    padding: 8px;
+    margin-right: 6px;
+    border: 0;
+    border-radius: 50%;
+}
+
+.edit-pill{
+    background-color: #1faa00;
+}
+
+.delete-pill{
+    background-color: #F44336;
+}
