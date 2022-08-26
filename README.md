@@ -8,14 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The project is currently live at - https://karyaa.vercel.app/
 
-![Demo](/Screenshots/demo.mp4)
-
-### Screenshots
-
-<img src="/Screenshots/dashboard.png?raw=true" alt="screenshot"> 
-<img src="/Screenshots/calendar.png?raw=true" alt="screenshot">
-<img src="/Screenshots/taskrecord.png?raw=true" alt="screenshot"> 
-<img src="/Screenshots/addtask.png?raw=true" alt="screenshot">
+![](/Screenshots/demo.webp)
 
 ### Features
 
@@ -23,9 +16,14 @@ The project is currently live at - https://karyaa.vercel.app/
 :arrow_right: Interactive dashboard with overdue and upcoming tasks status.  
 :arrow_right: Overview of monthly and yearly task metrics with Piechart and Linechart support.  
 :arrow_right: Complete Offline support with PWA and IndexedDb storage.  
-:arrow_right: Full calendar birds eye view of tasks status.  
+:arrow_right: Full calendar birds eye view of tasks status.
 
-## Development Setup
+### Screenshots
+
+<img src="/Screenshots/dashboard.png?raw=true" alt="screenshot"> 
+<img src="/Screenshots/calendar.png?raw=true" alt="screenshot">
+<img src="/Screenshots/taskrecord.png?raw=true" alt="screenshot"> 
+<img src="/Screenshots/addtask.png?raw=true" alt="screenshot">  
 
 ### Prerequisites
 
