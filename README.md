@@ -8,10 +8,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Features
 
-:arrow_right: Create tasks with "Open", "In Progress" and "Closed" status.
-:arrow_right: Interactive dashboard with piechart and linechart support.
-:arrow_right: Offline support with PWA and IndexedDb.
-:arrow_right: Full calendar birds eye view for task status.
+- :arrow_right: Create and organise your tasks with tags as needed.
+- :arrow_right: Interactive dashboard with overdue and upcoming tasks status.
+- :arrow_right: Overview of monthly and yearly task metrics with Piechart and Linechart support.
+- :arrow_right: Complete Offline support with PWA and IndexedDb storage.
+- :arrow_right: Full calendar birds eye view of tasks status.
 
 ## Development Setup
 
@@ -21,7 +22,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Setting Up the Project
 
-- Clone this repo: git clone https://github.com/yeshasprabhakar/WeatherMan.git(HTTPS)
+- Clone this repo: git clone https://github.com/yeshasmp/Karya.git(HTTPS)
 
 - Install project dependancies: npm install
 
@@ -35,7 +36,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/yeshasprabhakar/WeatherMan/blob/master/LICENSE.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/yeshasmp/Karya/blob/main/LICENSE.md)
 
 ### Credits
 
