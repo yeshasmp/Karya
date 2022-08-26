@@ -8,29 +8,35 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The project is currently live at - https://karyaa.vercel.app/
 
+![Demo](/Screenshots/demo.mp4)
+
+### Screenshots
+
+<img src="/Screenshots/dashboard.png?raw=true" alt="screenshot"> 
+<img src="/Screenshots/calendar.png?raw=true" alt="screenshot">
+<img src="/Screenshots/taskrecord.png?raw=true" alt="screenshot"> 
+<img src="/Screenshots/addtask.png?raw=true" alt="screenshot">
+
 ### Features
 
-- :arrow_right: Create and organise your tasks with tags as needed.
-- :arrow_right: Interactive dashboard with overdue and upcoming tasks status.
-- :arrow_right: Overview of monthly and yearly task metrics with Piechart and Linechart support.
-- :arrow_right: Complete Offline support with PWA and IndexedDb storage.
-- :arrow_right: Full calendar birds eye view of tasks status.
+:arrow_right: Create and organise your tasks with tags as needed.  
+:arrow_right: Interactive dashboard with overdue and upcoming tasks status.  
+:arrow_right: Overview of monthly and yearly task metrics with Piechart and Linechart support.  
+:arrow_right: Complete Offline support with PWA and IndexedDb storage.  
+:arrow_right: Full calendar birds eye view of tasks status.  
 
 ## Development Setup
 
 ### Prerequisites
 
-- :arrow_right: Install [Node.js](https://nodejs.org/en/) which includes Node Package Manager.
+:arrow_right: Install [Node.js](https://nodejs.org/en/) which includes Node Package Manager.
 
 ### Setting Up the Project
 
-- :arrow_right: Clone this repo: git clone https://github.com/yeshasmp/Karya.git(HTTPS)
-
-- :arrow_right: Install project dependancies: npm install
-
-- :arrow_right: Run `ng serve --open` for a dev server. The app will automatically reload if you change any of the source files.
-
-- :arrow_right: Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+:arrow_right: Clone this repo: git clone https://github.com/yeshasmp/Karya.git(HTTPS).  
+:arrow_right: Install project dependancies: npm install.  
+:arrow_right: Run `ng serve --open` for a dev server. The app will automatically reload if you change any of the source files.  
+:arrow_right: Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.  
 
 ### Contributing
 
@@ -42,11 +48,11 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### Credits
 
-- :arrow_right: [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/) for Bootstrap.
-- :arrow_right: [ngx-indexed-db](https://github.com/assuncaocharles/ngx-indexed-db) for IndexedDb wrapper.
-- :arrow_right: [ngx-charts](https://swimlane.github.io/ngx-charts/) for interactive charts.
-- :arrow_right: [Google material icons](https://fonts.google.com/icons) for Material icons.
-- :arrow_right: [Undraw](https://undraw.co/) for vector illustration.
+:arrow_right: [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/) for Bootstrap.  
+:arrow_right: [ngx-indexed-db](https://github.com/assuncaocharles/ngx-indexed-db) for IndexedDb wrapper.  
+:arrow_right: [ngx-charts](https://swimlane.github.io/ngx-charts/) for interactive charts.  
+:arrow_right: [Google material icons](https://fonts.google.com/icons) for Material icons.  
+:arrow_right: [Undraw](https://undraw.co/) for vector illustration.  
 
 ### Further help
 
