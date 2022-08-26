@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
-//ngx-indexed-db imports
+// ngx-indexed-db imports
 import { DBConfig, NgxIndexedDBModule } from 'ngx-indexed-db';
 
 // ng-bootstrap imports
