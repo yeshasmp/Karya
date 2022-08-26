@@ -21,7 +21,10 @@ export class AddTaskComponent implements OnInit {
   types: string[] = ["Design", "Bug", "Documentation"];
   status: string[] = ["Open", "In Progress", "Closed"];
 
-  constructor(public bsModalRef: BsModalRef, private formBuilder: FormBuilder, private dataService: DataService, private router: Router) { }
+  constructor(public bsModalRef: BsModalRef, private formBuilder: FormBuilder, private dataService: DataService, private router: Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+   }
 
   ngOnInit(): void {
     this.loadTaskForm(this.action, this.editTask);
